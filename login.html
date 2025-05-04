@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Left side with welcome message -->
+        <div class="left">
+            <h1>Welcome!</h1>
+            <p>Explore your next adventure with us.</p>
+            <button class="learn-more-btn">Learn More</button>
+        </div>
+
+        <!-- Right side with login form -->
+        <div class="right">
+            <h2>Sign in</h2>
+            <form action="login_backend.php" method="POST">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+
+                <div class="social-login">
+                    <a href="#" class="social-btn google-btn">Google</a>
+                    <a href="#" class="social-btn facebook-btn">Facebook</a>
+                </div>
+
+                <div class="role-select">
+                    <input type="radio" name="role" value="guest" id="guest" checked>
+                    <label for="guest">Guest</label>
+
+                    <input type="radio" name="role" value="host" id="host">
+                    <label for="host">Host</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
