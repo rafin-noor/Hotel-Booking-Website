@@ -9,7 +9,7 @@ body {
   align-items: center;
   height: 100vh;
 }
-/* rgba(0, 0, 0, 0.2) */
+
 .login-container {
   display: flex;
   border-radius: 10px;
@@ -304,10 +304,6 @@ body {
   background-color: #3b5998;
 }
 
-.pinterest-btn {
-  background-color: #e60023;
-}
-
 .social-btn:hover {
   opacity: 0.8;
 }
@@ -355,9 +351,6 @@ body {
     align-items: center;
   }
 }
-
-
-
 
 
 /* ======== HOMEPAGE STYLES ======== */
@@ -596,28 +589,26 @@ body {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* prevent side-scrolling */
   font-family: 'Arial', sans-serif;
   background-color: rgba(130, 132, 238, 0.858);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  padding-top: 80px;
 }
 
 /* Navbar */
 .navbar {
-  width: 100%;
-  background-color: white;
-  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  background-color: white;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .navbar .logo {
@@ -642,19 +633,19 @@ body {
   color: #6f5bd8;
 }
 
-.auth-buttons {
-  display: flex;
-  gap: 15px;
+.auth-buttons a {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
-.auth-buttons a {
-  padding: 10px 20px;
-  background-color: #FF6F61;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s;
+.auth-buttons {
+  display: flex;
+  align-items: center;
 }
 
 .auth-buttons a:hover {
@@ -665,7 +656,7 @@ body {
 .dashboard {
   width: 80%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 100px auto 40px; /* Top margin increased to avoid overlap with navbar */
   padding: 40px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -698,7 +689,6 @@ body {
   color: #e55b50;
 }
 
-/* Recent Bookings, Recommendations */
 .booking, .recommendation {
   background-color: #f9f9f9;
   padding: 15px;
