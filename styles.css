@@ -134,10 +134,6 @@ body {
   background-color: #3b5998;
 }
 
-.pinterest-btn {
-  background-color: #e60023;
-}
-
 .social-btn:hover {
   opacity: 0.8;
 }
@@ -554,4 +550,163 @@ body {
   .listing-card .info {
     padding: 10px;
   }
+}
+
+
+/* Listings Page Specific */
+.page-title {
+  font-size: 2.5em;
+  color: #6f5bd8;
+  margin-bottom: 30px;
+}
+
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  min-width: 200px;
+}
+
+.filter-section button {
+  padding: 12px 24px;
+  background-color: #6f5bd8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.filter-section button:hover {
+  background-color: #5b3f8c;
+}
+
+
+/* General Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: rgba(130, 132, 238, 0.858);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 80px;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #6f5bd8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6f5bd8;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-buttons a {
+  padding: 10px 20px;
+  background-color: #FF6F61;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.auth-buttons a:hover {
+  background-color: #e55b50;
+}
+
+/* Dashboard */
+.dashboard {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.dashboard h2 {
+  font-size: 2.5em;
+  color: #6f5bd8;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+  margin-bottom: 30px;
+}
+
+.dashboard-section h3 {
+  font-size: 1.8em;
+  color: #6f5bd8;
+}
+
+.dashboard-section a {
+  color: #FF6F61;
+  text-decoration: none;
+}
+
+.dashboard-section a:hover {
+  color: #e55b50;
+}
+
+/* Recent Bookings, Recommendations */
+.booking, .recommendation {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.booking p, .recommendation p {
+  margin: 5px 0;
+  color: #333;
 }
