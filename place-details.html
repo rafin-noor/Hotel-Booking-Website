@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place Details - StayEase</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">StayEase</div>
+    <div class="nav-links">
+      <a href="homepage.html">Home</a>
+      <a href="listings.html">Listings</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="auth-buttons">
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </div>
+  </div>
+
+  <!-- Place Details Section -->
+  <div class="place-details-container">
+    <!-- Photos and Description Section -->
+    <div class="place-photos-description">
+      <h2>Ocean Breeze</h2>
+      <p class="location">Santa Monica, CA</p>
+
+      <div class="place-photos">
+        <img src="./images/hotel2.jpg" alt="Ocean Breeze" class="place-photo" />
+        <!-- <img src="./images/hotel2.jpg" alt="Ocean View" class="place-photo" /> -->
+      </div>
+
+
+      <h3>Description</h3>
+      <p class="description">
+        Experience a tranquil stay at Ocean Breeze, a beachfront resort offering luxury amenities and serene views of the ocean. 
+        Whether you're looking to relax on the beach or explore the local attractions, this is the perfect place to unwind and recharge.
+      </p>
+
+      <h3>Tags</h3>
+      <div class="tags">
+        <span class="tag">Eco-Friendly</span>
+        <span class="tag">Wi-Fi</span>
+        <span class="tag">Pet-Friendly</span>
+      </div>
+    </div>
+
+    <!-- Reviews and Booking Section -->
+    <div class="place-details-right">
+      <div class="map">
+        <h3>Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.8592194288846!2d-118.4956951!3d34.0219016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c02a1e03f31d%3A0x7c83e0a19c2298ee!2sSanta%20Monica%2C%20CA!5e0!3m2!1sen!2sus!4v1672838833033" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <h3>Reviews</h3>
+      <div class="reviews">
+        <div class="review">
+          <p class="reviewer">Jane Doe</p>
+          <p class="review-rating">⭐⭐⭐⭐⭐</p>
+          <p class="review-text">"Amazing experience! The beach was beautiful, and the staff was very friendly. Highly recommend!"</p>
+        </div>
+        <div class="review">
+          <p class="reviewer">John Smith</p>
+          <p class="review-rating">⭐⭐⭐⭐</p>
+          <p class="review-text">"The place was great, but I wish the Wi-Fi was faster. Overall, a great stay!"</p>
+        </div>
+      </div>
+
+      <button class="book-now-btn" onclick="window.location.href='booking.html'">Book Now - $220/night</button>
+    </div>
+  </div>
+</body>
+</html>
