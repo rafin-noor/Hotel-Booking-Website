@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to StaySmart</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #6f86d6, #48c6ef);
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .landing-container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .landing-container h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+      animation: slideIn 1s ease-out;
+    }
+
+    .landing-container p {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+      animation: fadeIn 2.5s ease-in;
+    }
+
+    .landing-buttons .btn {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 12px 24px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid white;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .landing-buttons .btn:hover {
+      background-color: white;
+      color: #333;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(-30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="landing-container">
+    <h1>Welcome to StayEase</h1>
+    <p>Book your perfect stay with ease and comfort.</p>
+    <div class="landing-buttons">
+      <a href="homepage.html" class="btn">Explore</a>
+      <a href="login.html" class="btn">Login</a>
+      <a href="register.html" class="btn">Register</a>
+    </div>
+  </div>
+</body>
+</html>
