@@ -25,7 +25,6 @@
   <!-- Booking Page Content -->
   <div class="booking-container">
     <div class="booking-box">
-      
       <!-- Left Side: Welcome & Image -->
       <div class="booking-left">
         <h2>Welcome to Ocean Breeze!</h2>
@@ -44,25 +43,8 @@
             <label for="check-out">Check-out:</label>
             <input type="date" id="check-out" name="check-out" required />
           </div>
-
-          <div class="payment-section">
-            <h3>Payment</h3>
-            <label for="payment-method">Select Payment Method:</label>
-            <select id="payment-method">
-              <option value="paypal">PayPal</option>
-              <option value="stripe">Stripe</option>
-            </select>
-
-            <div id="paypal" class="payment-method">
-              <p>Pay with PayPal</p>
-            </div>
-
-            <div id="stripe" class="payment-method">
-              <p>Pay with Stripe</p>
-            </div>
-          </div>
-
-          <button class="confirm-booking-btn" onclick="confirmBooking()">Confirm Booking</button>
+          
+          <button class="confirm-booking-btn" onclick="goToPayment()">Confirm Booking</button>
         </div>
 
         <div class="confirmation-section" style="display:none;">
@@ -75,16 +57,23 @@
   </div>
 
   <script>
-    document.getElementById('payment-method').addEventListener('change', function () {
-      const selected = this.value;
-      document.querySelectorAll('.payment-method').forEach(method => method.style.display = 'none');
-      document.getElementById(selected).style.display = 'block';
-    });
+    function goToPayment() {
+      const checkIn = document.getElementById('check-in').value;
+      const checkOut = document.getElementById('check-out').value;
 
-    function confirmBooking() {
-      document.querySelector('.form-section').style.display = 'none';
-      document.querySelector('.confirmation-section').style.display = 'block';
+      if (!checkIn || !checkOut) {
+        alert("Please select both check-in and check-out dates.");
+        return;
+      }
+
+      // Save check-in and check-out dates to localStorage
+      localStorage.setItem('checkIn', checkIn);
+      localStorage.setItem('checkOut', checkOut);
+
+      // Redirect to payment page
+      window.location.href = 'payment.html';
     }
   </script>
+  
 </body>
 </html>

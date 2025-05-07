@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment - StayEase</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="payment-container">
+    <h2>Secure Checkout</h2>
+
+    <label for="method-select">Choose Payment Method:</label>
+    <select id="method-select">
+      <option value="card">Credit/Debit Card</option>
+      <option value="bkash">bKash</option>
+      <option value="paypal">PayPal</option>
+    </select>
+
+    <!-- Card Payment -->
+    <div id="card-form" class="payment-form">
+      <input type="text" placeholder="Cardholder Name" required>
+      <input type="text" placeholder="Card Number" required>
+      <input type="text" placeholder="MM/YY" required>
+      <input type="text" placeholder="CVV" required>
+    </div>
+
+    <!-- bKash Payment -->
+    <div id="bkash-form" class="payment-form" style="display: none;">
+      <input type="text" placeholder="bKash Account Number" required>
+      <input type="password" placeholder="PIN" required>
+    </div>
+
+    <!-- PayPal Payment -->
+    <div id="paypal-form" class="payment-form" style="display: none;">
+      <p>You will be redirected to PayPal to complete your payment.</p>
+    </div>
+
+    <button class="confirm-booking-btn" onclick="processPayment()">Pay Now</button>
+
+    <div id="payment-status" class="status-box"></div>
+  </div>
+
+  <script>
+    const methodSelect = document.getElementById('method-select');
+    const forms = {
+      card: document.getElementById('card-form'),
+      bkash: document.getElementById('bkash-form'),
+      paypal: document.getElementById('paypal-form'),
+    };
+
+    methodSelect.addEventListener('change', function () {
+      for (let key in forms) {
+        forms[key].style.display = 'none';
+      }
+      forms[this.value].style.display = 'block';
+    });
+
+    function processPayment() {
+      const statusBox = document.getElementById('payment-status');
+      const success = Math.random() > 0.3; // Simulate success or failure
+
+      statusBox.textContent = success ? '✅ Payment Successful!' : '❌ Payment Failed. Please try again.';
+      statusBox.style.color = success ? 'green' : 'red';
+    }
+  </script>
+</body>
+</html>
+
